@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/users")
 class UserApi {
 
     private val _log: Logger = LoggerFactory.getLogger(UserApi::class.java)
