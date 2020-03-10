@@ -10,14 +10,13 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 class UserApi {
 
-    private val _log: Logger = LoggerFactory.getLogger(UserApi::class.java)
+    private val _log: Logger = LoggerFactory.getLogger(javaClass)
 
 	@GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
 	fun get(): ResponseEntity<String>? {
-		_log.debug("GET CALLED")
 		return ResponseEntity.ok("GET CALLED")
 	}
 }

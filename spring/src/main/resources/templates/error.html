@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title th:text="#{mainTitle}">PageError</title>
+<link rel="shortcut icon" th:href="@{/images/favicon.png}"
+	href="images/favicon.png" />
+<link rel="icon" th:href="@{/images/favicon.png}"
+	href="images/favicon.png" />
+<link th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css"
+	rel="stylesheet">
+<link th:href="@{/css/webecg.css}" href="css/webecg.css"
+	rel="stylesheet">
+</head>
+<body class="bg-md">
+	<div class="container">
+		<div class="center-col">
+			<img class="card-body " th:src="@{/images/index.png}"
+				width="390px" />
+			<h1 th:text="#{mainTitle}"></h1>
+			<h1 th:text="${version}"></h1>
+		</div>
+	</div>
+</body>
+</html>
