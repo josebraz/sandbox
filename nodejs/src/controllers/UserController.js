@@ -8,6 +8,11 @@ module.exports = {
         const users = await User.paginate({}, { page, limit: 10 });
         return res.json(users);
     },
+    async since(req, res) {
+        const { page = 1} = req.query;
+        const users = await User.paginate({ modifiedAt: req.params.since }, { page, limit: 10 });
+        return res.json(users);
+    },
     async show(req, res) {
         const user = await User.findById(req.params.id);
         return res.json(user);
